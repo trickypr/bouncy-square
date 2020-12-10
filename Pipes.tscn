@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 240 )
+
+[node name="Pipes" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 0, -50 )
+
+[node name="ColorRect" type="ColorRect" parent="Area2D"]
+margin_left = -20.0
+margin_top = -232.0
+margin_right = 20.0
+margin_bottom = 238.0
+color = Color( 0.211765, 0.584314, 0.960784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 0, 650 )
+rotation = 3.14159
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+rotation = 3.14159
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Area2D2"]
+margin_left = -20.0
+margin_top = -224.0
+margin_right = 20.0
+margin_bottom = 238.0
+color = Color( 0.211765, 0.584314, 0.960784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
